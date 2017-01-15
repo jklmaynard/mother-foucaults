@@ -14,3 +14,31 @@
  *= require_tree .
  *= require_self
  */
+
+/****** GENERAL ELEMENTS ******/
+a, a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.mo-fos-viewport {
+  padding: 50px;
+}
+.mo-fos-left-column {}
+
+.mo-fos-center-column {
+  border-right-style: inset; 
+}
+.mo-fos-right-column {}
+.mo-fos-right-column ul {
+  font-size: 20px;
+  list-style: none;
+  padding-left: 0px;
+  text-align: left;
+}
+
+#logo {
+  margin-top: -57px;
+  max-height: 300px;
+  max-width: 300px;
+}
