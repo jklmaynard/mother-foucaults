@@ -21,7 +21,7 @@ angular.module('motherFoucaults')
   obj.like = function(event) {
     return $http.put('/events/' + event.id + '/likes.json').then(function(data){
       event.likes += 1;
-    })
+    });
   };
   return obj;
-}])
+}]);
