@@ -3,7 +3,9 @@ angular.module('motherFoucaults')
   '$scope',
   'events',
   function($scope, events){
-    $scope.events = events.events;
+    $scope.events = events.events.sort(function(a,b) {
+      return new Date(a.date) - new Date(b.date);
+    });
     $scope.addEvent = function() {
       if (!$scope.title || $scope.title === '') {
         return;

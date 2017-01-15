@@ -1,7 +1,12 @@
   <div class="">
-    <div ng-repeat="event in events | orderBy: '-date'">
-      <span class="" style="cursor:pointer" ng-click="likeEvent(event)">^</span>
-      <a href="#!/events/{{$index}}">{{event.date}}: {{event.title}} - like: {{event.likes}}</a>
+    <div ng-repeat="event in events">
+      <div class="col-md-12">
+        <a href="#!/events/{{$index}}">
+          <h4>{{event.title}}</h4>
+          <h5>{{event.date}}</h5>
+          <span class="" style="cursor:pointer" ng-click="likeEvent(event)">^</span>
+        </a>
+        <a href="#!/events/{{$index}}">like: {{event.likes}}</a>
+      </div>
     </div>
-
   </div>
