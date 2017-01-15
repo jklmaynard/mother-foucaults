@@ -14,6 +14,11 @@ angular.module('motherFoucaults')
     return $http.post('/events.json', event).then(function(data) {
       obj.events.push(data.data);
     });
+  };
+  obj.like = function(event) {
+    return $http.put('/events/' + event.id + '/likes.json').then(function(data){
+      event.likes += 1;
+    })
   }
   return obj;
 }])

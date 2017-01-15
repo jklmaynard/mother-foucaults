@@ -19,7 +19,7 @@ angular.module('motherFoucaults')
       $scope.date = '';
     };
     $scope.likeEvent = function(event) {
-      event.likes += 1;
+      events.like(event);
     }
   }
 ]);
