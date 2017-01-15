@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mother Foucault's</title>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body ng-app="motherFoucaults" ng-controller="MainCtrl">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="page-header">
+          <h1><a href="/">Mother Foucault's Books</a></h1>
+        </div>
+        <ui-view></ui-view>
+      </div>
+    </div>
+  </body>
+</html>
