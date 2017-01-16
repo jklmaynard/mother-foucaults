@@ -15,7 +15,7 @@ angular.module('motherFoucaults')
         date: $scope.date,
         description: $scope.description,
         likes: 0,
-        snippet: $scope.description.slice(0, 140)
+        snippet: $scope.description.slice(0, 300)
       });
       $scope.title = '';
       $scope.description = '';

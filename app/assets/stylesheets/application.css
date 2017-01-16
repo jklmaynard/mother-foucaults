@@ -27,7 +27,7 @@ a, a:hover {
 .mo-fos-left-column {}
 
 .mo-fos-center-column {
-  border-right-style: inset; 
+  border-right-style: inset;
 }
 .mo-fos-right-column {}
 .mo-fos-right-column ul {
@@ -38,6 +38,7 @@ a, a:hover {
 }
 
 #logo {
+  margin-left: -35px;
   margin-top: -57px;
   max-height: 300px;
   max-width: 300px;

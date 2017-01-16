@@ -9,7 +9,7 @@ angular.module('motherFoucaults')
     return $http.get('/events.json').then(function(data) {
       data.data.forEach(function(index) {
         if (index.description) {
-          index.snippet = index.description.slice(0, 140)+' (. . .)';
+          index.snippet = index.description.slice(0, 300)+' (. . .)';
         }
       });
       angular.copy(data.data, obj.events);
