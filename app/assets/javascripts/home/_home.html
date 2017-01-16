@@ -4,6 +4,7 @@
         <a href="#!/events/{{$index}}">
           <h4>{{event.title}}</h4>
           <h5>{{event.date}}</h5>
+          <p>{{event.snippet}}</p>
         </a>
         <span class="" style="cursor:pointer" ng-click="likeEvent(event)">^</span>
         <a href="#!/events/{{$index}}">like: {{event.likes}}</a>

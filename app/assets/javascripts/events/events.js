@@ -7,6 +7,11 @@ angular.module('motherFoucaults')
   };
   obj.getAll = function() {
     return $http.get('/events.json').then(function(data) {
+      data.data.forEach(function(index) {
+        if (index.description) {
+          index.snippet = index.description.slice(0, 140)+' (. . .)';
+        }
+      });
       angular.copy(data.data, obj.events);
     });
   };
