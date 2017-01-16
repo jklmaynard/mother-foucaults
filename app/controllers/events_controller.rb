@@ -13,6 +13,10 @@ class EventsController < ApplicationController
     respond_with Event.find(params[:id])
   end
 
+  def destroy
+    respond_with Event.destroy(params[:id])
+  end
+
   def likes
     event = Event.find(params[:id])
     event.increment!(:likes)

@@ -23,6 +23,9 @@ angular.module('motherFoucaults')
     };
     $scope.likeEvent = function(event) {
       events.like(event);
+    };
+    $scope.deleteEvent = function(event) {
+      events.delete(event);
     }
   }
 ]);
