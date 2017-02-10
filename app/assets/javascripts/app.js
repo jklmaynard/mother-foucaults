@@ -1,4 +1,4 @@
-angular.module('motherFoucaults', ['ui.router', 'templates'])
+angular.module('motherFoucaults', ['ui.router', 'templates', 'ui.calendar'])
   .config([
     '$stateProvider',
     '$urlRouterProvider',

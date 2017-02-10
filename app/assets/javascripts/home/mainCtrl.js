@@ -2,7 +2,7 @@ angular.module('motherFoucaults')
 .controller('MainCtrl', [
   '$scope',
   'events',
-  function($scope, events){
+  function($scope, events) {
     $scope.events = events.events.sort(function(a,b) {
       return new Date(a.date) - new Date(b.date);
     });
