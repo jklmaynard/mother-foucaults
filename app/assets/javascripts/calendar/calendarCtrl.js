@@ -3,7 +3,16 @@ angular.module('motherFoucaults')
   '$scope',
   'events',
   function($scope, events) {
-    eventSource = [];
+    $scope.eventsArray = [
+      {title: "This Event", start: new Date(2017, 2, 1)}
+    ];
+    // events.events.forEach(function(event) {
+    //   var newObj = {
+    //     title: event.title,
+    //     start: event.date
+    //   }
+    //   $scope.eventsArray.push(newObj);
+    // });
     $scope.uiConfig = {
       calendar:{
         height: 450,
@@ -18,5 +27,6 @@ angular.module('motherFoucaults')
         eventResize: $scope.alertOnResize
       }
     };
+    $scope.eventSource = $scope.eventsArray;
   }
 ]);
