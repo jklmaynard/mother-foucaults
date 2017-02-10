@@ -21,7 +21,7 @@ angular.module('motherFoucaults', ['ui.router', 'templates', 'ui.calendar'])
     $stateProvider.state('calendar', {
       url: '/calendar',
       templateUrl: 'calendar/_calendar.html',
-      controller: 'MainCtrl',
+      controller: 'CalendarCtrl',
       resolve: {
         eventPromise: ['events', function(events) {
           return events.getAll();
