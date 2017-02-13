@@ -16,13 +16,8 @@
         <ui-view></ui-view>
       </div>
       <div class="mo-fos-right-column col-md-3">
-        <ul class="mo-fos-left-ul">
-          <li><a href="#!/calendar">Calendar of Events</a></li>
-          <li><a href="#!/about">About</a></li>
-          <li ng-show="signIn()">{{user.username}}</li>
-          <li ng-show="signIn()" ng-click="logout()">Logout</li>
-        </ul>
-        <div style="margin-top:130px;" ng-show="signIn()">
+        <div ng-include="'nav/_nav.html'" ng-controller="NavCtrl"></div>
+        <div style="margin-top:130px;" ng-show="signedIn()" ng-controller="MainCtrl">
           <form class="" ng-submit="addEvent()" style="margin-top:30px">
             <h3>Add New Event</h3>
             <div class="form-group">

@@ -8,7 +8,7 @@
         </a>
         <span class="" style="cursor:pointer" ng-click="likeEvent(event)">^</span>
         <a href="#!/events/{{$index}}">like: {{event.likes}}</a>
-        <button ng-show="signIn()" type="button" class="btn btn-xs btn-warning" ng-click="deleteEvent(event)">Delete</button>
+        <button ng-show="signedIn()" type="button" class="btn btn-xs btn-warning" ng-click="deleteEvent(event)">Delete</button>
       </div>
     </div>
   </div>

@@ -30,7 +30,7 @@ angular.module('motherFoucaults', ['ui.router', 'templates', 'ui.calendar', 'Dev
     });
     $stateProvider.state('login', {
       url: '/login',
-      tmeplateUrl: 'auth/_login.html',
+      templateUrl: 'auth/_login.html',
       controller: 'AuthCtrl',
       onEnter: ['$state', 'Auth', function($state, Auth) {
         Auth.currentUser().then(function() {

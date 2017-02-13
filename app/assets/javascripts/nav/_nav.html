@@ -1,0 +1,6 @@
+<ul class="mo-fos-left-ul">
+  <li><a href="#!/calendar">Calendar of Events</a></li>
+  <li><a href="#!/about">About</a></li>
+  <li ng-show="signedIn()">{{user.username}}</li>
+  <li ng-show="signedIn()" ng-click="logout()">Logout</li>
+</ul>
