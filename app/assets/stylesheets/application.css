@@ -16,10 +16,17 @@
  *= require_self
  */
 
+/** for ui.bootstrap **/
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
 /****** GENERAL ELEMENTS ******/
 a, a:hover {
   color: black;
   text-decoration: none;
+}
+
+a.right.carousel-control, a.left.carousel-control {
+  display: none;
 }
 
 .mo-fos-viewport {

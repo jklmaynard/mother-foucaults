@@ -1,7 +1,7 @@
 //= require jquery
-//= require bootstrap
 //= require moment
 //= require angular
+//= require angular-bootstrap
 //= require AngularDevise
 //= require angular-rails-templates
 //= require angular-ui-router
