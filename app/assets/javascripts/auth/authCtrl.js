@@ -7,6 +7,8 @@ angular.module('motherFoucaults')
     $scope.login = function() {
       Auth.login($scope.user).then(function() {
         $state.go('home');
+      }, function(err) {
+        return;
       });
     };
   }

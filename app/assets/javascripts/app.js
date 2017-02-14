@@ -35,6 +35,8 @@ angular.module('motherFoucaults', ['ui.router', 'templates', 'ui.calendar', 'Dev
       onEnter: ['$state', 'Auth', function($state, Auth) {
         Auth.currentUser().then(function() {
           $state.go('home');
+        }, function(err) {
+          return;
         });
       }]
     });

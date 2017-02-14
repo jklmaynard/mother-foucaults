@@ -6,6 +6,8 @@ angular.module('motherFoucaults')
   function($scope, events, Auth) {
     Auth.currentUser().then(function() {
       $scope.signedIn = Auth.isAuthenticated;
+    }, function(err) {
+      return;
     });
     $scope.events = events.events.sort(function(a,b) {
       return new Date(a.date) - new Date(b.date);
