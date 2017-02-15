@@ -28,6 +28,13 @@ angular.module('motherFoucaults')
       event.likes += 1;
     });
   };
+  obj.edit = function(event) {
+    return $http.put('/events/' + event.id + '.json', event).then(function(data) {
+      event.title = data.title;
+      event.description = data.description;
+      event.date = data.date;
+    })
+  }
   obj.delete = function(event) {
     position = obj.events.indexOf(event);
     return $http.delete('/events/' + event.id).then(function(data) {

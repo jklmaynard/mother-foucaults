@@ -10,5 +10,13 @@ angular.module('motherFoucaults')
       $scope.signedIn = Auth.isAuthenticated;
       $scope.logout = Auth.logout;
     });
+    $scope.editEvent = function(event) {
+      events.edit({
+        id: event.id,
+        title: $scope.title === undefined ? event.title : $scope.title,
+        date: $scope.date === undefined ? event.date : $scope.date,
+        description: $scope.description === undefined ? event.description : $scope.description
+      })
+    };
   }
 ]);
