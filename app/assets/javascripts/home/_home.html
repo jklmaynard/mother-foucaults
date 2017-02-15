@@ -1,17 +1,4 @@
 <div class="row" ng-include="'carousel/_carousel.html'" ng-controller="CarouselCtrl"></div>
-<!-- <div ng-controller="CarouselCtrl">
-  <div class="col-md-12" style="height: 305px">
-    <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
-      <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-        <img ng-src="{{slide.image}}" style="max-width:1000px; margin: auto 0;">
-        <div class="carousel-caption">
-          <h4>Slide {{slide.id}}</h4>
-          <p>{{slide.text}}</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
 <div class="row">
   <h3 style="border-bottom-style:groove;">Readings, &amp;c.,</h3>
   <div ng-repeat="event in events">
