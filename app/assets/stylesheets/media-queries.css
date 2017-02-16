@@ -1,7 +1,7 @@
 @media screen and (max-width: 451px) {
   .mobile-header {
     display:inline;
-    height: 200px;
+    height: 142px;
   }
   #mobile-logo {
     margin-left: -34px;
