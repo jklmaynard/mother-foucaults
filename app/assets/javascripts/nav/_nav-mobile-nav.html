@@ -2,7 +2,7 @@
     <ul class="mo-fos-nav-ul" style="list-style: none;">
       <li><h3><a href="#!/calendar">Calendar</a></h3></li>
       <li><h3><a href="#!/about">About</a></h3></li>
-      <li><h3><a href="#!/new-event">Add Event</a></h3></li>
+      <li ng-show="signedIn()"><h3><a href="#!/new-event">Add Event</a></h3></li>
       <li ng-show="signedIn()">{{user.username}}</li>
       <li ng-show="signedIn()" ng-click="logout()">Logout</li>
     </ul>

@@ -1,7 +1,7 @@
 <ul class="mo-fos-left-ul">
   <li><a href="#!/calendar">Calendar</a></li>
   <li><a href="#!/about">About</a></li>
-  <li><a href="#!/new-event">Add Event</a></li>
+  <li ng-show="signedIn()"><a href="#!/new-event">Add Event</a></li>
   <li ng-show="signedIn()">{{user.username}}</li>
   <li ng-show="signedIn()" ng-click="logout()">Logout</li>
 </ul>
