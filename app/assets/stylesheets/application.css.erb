@@ -11,15 +11,19 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_tree .
+ *= require_self
  *= require bootstrap/dist/css/bootstrap
  *= require fullcalendar/dist/fullcalendar
- *= require_self
  *= require main
  *= require media-queries
  */
 
 /** for ui.bootstrap **/
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+div a, h3 a, h4 a, li a {
+  color: black;
+}
 
 body {
   background: url('<%= asset_path("concrete_seamless.png") %>');
