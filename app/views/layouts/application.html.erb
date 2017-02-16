@@ -9,18 +9,21 @@
   </head>
 
   <body ng-app="motherFoucaults">
-    <div class="mo-fos-viewport col-md-12">
-      <div class="mo-fos-left-column col-md-3">
-        <div class="logo-div">
-          <a class="navbar-brand" href="#"><img id="logo" src=<%= image_url('navbar-logo.png')%> ></a>
+      <div class="mo-fos-viewport col-md-12">
+        <div class="mobile-header col-md-12">
+          <a class="navbar-brand" href="#"><img id="mobile-logo" src=<%= image_url('navbar-logo.png')%> ></a>
+        </div>
+        <div class="mo-fos-left-column col-md-3">
+          <div class="logo-div">
+            <a class="navbar-brand" href="#"><img id="logo" src=<%= image_url('navbar-logo.png')%> ></a>
+          </div>
+        </div>
+        <div class="mo-fos-center-column col-md-7">
+          <ui-view></ui-view>
+        </div>
+        <div class="mo-fos-right-column col-md-2">
+          <div ng-include="'nav/_nav.html'" ng-controller="NavCtrl"></div>
         </div>
       </div>
-      <div class="mo-fos-center-column col-md-7">
-        <ui-view></ui-view>
-      </div>
-      <div class="mo-fos-right-column col-md-2">
-        <div ng-include="'nav/_nav.html'" ng-controller="NavCtrl"></div>
-      </div>
-    </div>
   </body>
 </html>

@@ -1,3 +1,17 @@
-@media screen and (max-width: 700px) {
-  
+@media screen and (max-width: 801px) {
+  .mo-fos-viewport {
+    flex-direction: column;
+  }
+  .mo-fos-left-column {
+    display: none;
+  }
+  .mobile-header {
+    display:inline;
+    height: 200px;
+  }
+  #mobile-logo {
+    margin-left: -35px;
+    margin-top: -39px;
+    width: 200px;
+  }
 }
