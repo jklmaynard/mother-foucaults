@@ -10,9 +10,10 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require_tree .
  *= require bootstrap/dist/css/bootstrap
  *= require fullcalendar/dist/fullcalendar
- *= require_tree .
+ *= require media-queries
  *= require_self
  */
 
@@ -33,10 +34,20 @@ body {
   background: url('<%= asset_path("concrete_seamless.png") %>');
 }
 
+.mo-fos-header {
+  height: 300px;
+  padding: 50px;
+}
+#logo {
+  margin-left: -35px;
+  margin-top: -57px;
+  max-height: 300px;
+  max-width: 300px;
+}
+
 .mo-fos-viewport {
   padding: 50px;
 }
-.mo-fos-left-column {}
 
 .mo-fos-center-column {
   border-right-style: inset;
@@ -47,11 +58,4 @@ body {
   list-style: none;
   padding-left: 0px;
   text-align: left;
-}
-
-#logo {
-  margin-left: -35px;
-  margin-top: -57px;
-  max-height: 300px;
-  max-width: 300px;
 }

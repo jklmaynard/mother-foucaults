@@ -2,17 +2,20 @@
 <html>
   <head>
     <title>Mother Foucault's</title>
+    <meta name="viewport" content="width=device-width" />
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
   </head>
 
   <body ng-app="motherFoucaults">
-    <div class="mo-fos-viewport row">
-      <div class="mo-fos-left-column col-md-2">
+    <div class="mo-fos-header row">
+      <div class="mo-fos-left-column">
         <a class="navbar-brand" href="#"><img id="logo" src=<%= image_url('navbar-logo.png')%> ></a>
       </div>
-      <div class="mo-fos-center-column col-md-8">
+    </div>
+    <div class="mo-fos-viewport row">
+      <div class="mo-fos-center-column col-md-10">
         <ui-view></ui-view>
       </div>
       <div class="mo-fos-right-column col-md-2">
