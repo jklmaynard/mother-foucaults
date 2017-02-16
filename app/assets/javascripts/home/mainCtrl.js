@@ -3,7 +3,8 @@ angular.module('motherFoucaults')
   '$scope',
   'events',
   'Auth',
-  function($scope, events, Auth) {
+  '$state',
+  function($scope, events, Auth, $state) {
     Auth.currentUser().then(function() {
       $scope.signedIn = Auth.isAuthenticated;
     }, function(err) {
@@ -23,9 +24,7 @@ angular.module('motherFoucaults')
         likes: 0,
         snippet: $scope.description.slice(0, 300)
       });
-      $scope.title = '';
-      $scope.description = '';
-      $scope.date = '';
+      $state.go('home');
     };
     $scope.likeEvent = function(event) {
       events.like(event);

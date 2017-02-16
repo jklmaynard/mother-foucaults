@@ -9,32 +9,17 @@
   </head>
 
   <body ng-app="motherFoucaults">
-    <div class="mo-fos-header row">
-      <div class="mo-fos-left-column">
-        <a class="navbar-brand" href="#"><img id="logo" src=<%= image_url('navbar-logo.png')%> ></a>
+    <div class="mo-fos-viewport col-md-12">
+      <div class="mo-fos-left-column col-md-3">
+        <div class="logo-div">
+          <a class="navbar-brand" href="#"><img id="logo" src=<%= image_url('navbar-logo.png')%> ></a>
+        </div>
       </div>
-    </div>
-    <div class="mo-fos-viewport row">
-      <div class="mo-fos-center-column col-md-10">
+      <div class="mo-fos-center-column col-md-7">
         <ui-view></ui-view>
       </div>
       <div class="mo-fos-right-column col-md-2">
         <div ng-include="'nav/_nav.html'" ng-controller="NavCtrl"></div>
-        <div style="margin-top:130px;" ng-show="signedIn()" ng-controller="MainCtrl">
-          <form class="" ng-submit="addEvent()" style="margin-top:30px">
-            <h3>Add New Event</h3>
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Name" ng-model="title">
-            </div>
-            <div class="form-group">
-              <textarea type="text" rows="5" cols="6" class="form-control" placeholder="Description" ng-model="description"></textarea>
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="01 January 1999" ng-model="date">
-            </div>
-            <button type="submit" class="btn btn-primary">Add Event</button>
-          </form>
-        </div>
       </div>
     </div>
   </body>

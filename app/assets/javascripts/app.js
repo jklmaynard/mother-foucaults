@@ -13,6 +13,11 @@ angular.module('motherFoucaults', ['ui.router', 'templates', 'ui.calendar', 'Dev
         }]
       }
     });
+    $stateProvider.state('new-event', {
+      url: '/new-event',
+      templateUrl: 'static/_new-event.html',
+      controller: 'MainCtrl'
+    });
     $stateProvider.state('events', {
       url: '/events/{id}',
       templateUrl: 'events/_events.html',
