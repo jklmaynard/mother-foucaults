@@ -1,4 +1,50 @@
-@media screen and (max-width: 801px) {
+@media screen and (max-width: 451px) {
+  .mobile-header {
+    display:inline;
+    height: 200px;
+  }
+  #mobile-logo {
+    margin-left: -34px;
+    margin-top: -39px;
+    width: 160px;
+  }
+  .mobile-logo-container {
+    display: inline-block;;
+    height: 200px;
+    width: 30%;
+  }
+  .mobile-nav-partial-container {
+    display: inline-block;
+    float: right;
+    position: relative;
+  }
+  .mo-fos-left-column, .mo-fos-right-column {
+    display: none;
+  }
+  .mobile-nav-div {
+    display:inline-block;
+    padding: 30px;
+    position: absolute;
+    right: 2px;
+    text-align: right;
+    top: -50px;
+  }
+  .mo-fos-nav-mobile-nav {
+    float: right;
+    width: 70%;
+  }
+  .mo-fos-nav-ul {
+    line-height: 15px;
+  }
+  .mo-fos-nav-ul h3 {
+    font-size: 18px;
+  }
+  .mo-fos-viewport {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-device-width: 452px) and (max-device-width: 801px) {
   .mobile-header {
     display:inline;
     height: 200px;
@@ -29,11 +75,11 @@
     display:inline-block;
     padding: 30px;
     position: absolute;
-    top: -50px;
     right: 2px;
+    text-align: right;
+    top: -50px;
   }
   .mo-fos-viewport {
     flex-direction: column;
   }
-
 }
