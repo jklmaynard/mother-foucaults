@@ -9,6 +9,7 @@ angular.module('motherFoucaults')
     $scope.eventTitle = '';
     $scope.eventDescription = '';
     $scope.eventDate = '';
+    $scope.eventTime = ''
     Auth.currentUser().then(function() {
       $scope.signedIn = Auth.isAuthenticated;
       $scope.logout = Auth.logout;
@@ -19,6 +20,7 @@ angular.module('motherFoucaults')
         title: $scope.eventTitle === '' ? $scope.event.title : $scope.eventTitle,
         date: $scope.eventDate === '' ? $scope.event.date : $scope.eventDate,
         description: $scope.eventDescription === '' ? $scope.event.description : $scope.eventDescription
+        time: $scope.eventTime === '' ? $scope.event.time : $scope.eventTime
       }, $scope.event).then(function(data) {
         return $scope.event = data;
       })

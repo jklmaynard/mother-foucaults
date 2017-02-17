@@ -18,12 +18,14 @@ angular.module('motherFoucaults')
         if (!$scope.title || $scope.title === '') {
           return;
         }
+        $scope.timeInt = events.numberizeEventTime($scope.time)
         events.create({
           title: $scope.title,
           date: $scope.date,
           description: $scope.description,
           likes: 0,
-          snippet: $scope.description.slice(0, 300)
+          snippet: $scope.description.slice(0, 300),
+          time: $scope.timeInt
         });
         $state.go('home');
       }
