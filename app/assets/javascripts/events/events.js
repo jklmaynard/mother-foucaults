@@ -55,6 +55,7 @@ angular.module('motherFoucaults')
     var int, timeArray = str.toLowerCase().split(' ');
     if (timeArray.length !== 2) {
       obj.errorLog("Please make sure your hour and the ante/post meridian are separated by a space.");
+      return;
     }
     if (timeArray[1] === 'am') {
       int = parseInt(timeArray[0]);

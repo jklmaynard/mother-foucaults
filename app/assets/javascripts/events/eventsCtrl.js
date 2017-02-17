@@ -19,7 +19,7 @@ angular.module('motherFoucaults')
         id: $scope.event.id,
         title: $scope.eventTitle === '' ? $scope.event.title : $scope.eventTitle,
         date: $scope.eventDate === '' ? $scope.event.date : $scope.eventDate,
-        description: $scope.eventDescription === '' ? $scope.event.description : $scope.eventDescription
+        description: $scope.eventDescription === '' ? $scope.event.description : $scope.eventDescription,
         time: $scope.eventTime === '' ? $scope.event.time : $scope.eventTime
       }, $scope.event).then(function(data) {
         return $scope.event = data;

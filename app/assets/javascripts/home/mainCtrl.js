@@ -18,7 +18,12 @@ angular.module('motherFoucaults')
         if (!$scope.title || $scope.title === '') {
           return;
         }
+        //Change time from meridian string to integer -- quietly fail if undefined
         $scope.timeInt = events.numberizeEventTime($scope.time)
+        if ($scope.timeInt === undefined) {
+          return;
+        }
+        //Create event through events.js object
         events.create({
           title: $scope.title,
           date: $scope.date,
@@ -27,6 +32,7 @@ angular.module('motherFoucaults')
           snippet: $scope.description.slice(0, 300),
           time: $scope.timeInt
         });
+        //Back to home page
         $state.go('home');
       }
     };
