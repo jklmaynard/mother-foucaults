@@ -1,7 +1,9 @@
   <div class="col-md-12">
     <h3>{{event.title}}</h3>
     <h4>{{event.date}}</h4>
-    <p>{{event.description}}</p>
+    <div id="event-description">
+
+    </div>
   </div>
   <div class="col-md-12"  style="margin-top:130px;" ng-show="signedIn()">
     <form class="" ng-submit="editEvent(event)" style="margin-top:30px">

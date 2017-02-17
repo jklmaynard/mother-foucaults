@@ -7,9 +7,23 @@ angular.module('motherFoucaults')
   function($scope, $stateParams, events, Auth){
     $scope.event = events.events[$stateParams.id];
     $scope.eventTitle = '';
-    $scope.eventDescription = '';
     $scope.eventDate = '';
-    $scope.eventTime = ''
+    $scope.eventTime = '';
+    $scope.eventDescription = '';
+    $scope.descriptionArray = events.decodeDescription($scope.event.description);
+    //take encoded description from events obj, write some DOM elements onto the page
+    $scope.setDOMNode = function(arr, elementId) {
+      var div = document.getElementById(elementId);
+      arr.forEach(function(obj) {
+        var el, text;
+        el = document.createElement(obj.el);
+        if (obj.content !== null) {
+          text = document.createTextNode(obj.content);
+          el.appendChild(text);
+        }
+        div.appendChild(el);
+      });
+    }
     Auth.currentUser().then(function() {
       $scope.signedIn = Auth.isAuthenticated;
       $scope.logout = Auth.logout;
@@ -25,5 +39,6 @@ angular.module('motherFoucaults')
         return $scope.event = data;
       })
     };
+    $scope.setDOMNode($scope.descriptionArray, 'event-description');;
   }
 ]);

@@ -27,7 +27,7 @@ angular.module('motherFoucaults')
         events.create({
           title: $scope.title,
           date: $scope.date,
-          description: $scope.description,
+          description: encodeURI($scope.description),
           likes: 0,
           snippet: $scope.description.slice(0, 300),
           time: $scope.timeInt

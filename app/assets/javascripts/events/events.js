@@ -7,7 +7,21 @@ angular.module('motherFoucaults')
   };
   obj.errorLog = function(err) {
     alert(err);
-  }
+  };
+  obj.decodeDescription = function(description) {
+    var arr = description.split('%0A'), elementArr = [];
+    arr.forEach(function(index) {
+      if (index.length !== 0) {
+        el = 'p'
+        content = decodeURI(index);
+        elementArr.push({el: el, content: content});
+      } else {
+        el = 'br'
+        elementArr.push({el: el, content: null});
+      }
+    });
+    return elementArr;
+  };
   obj.create = function(event) {
     return $http.post('/events.json', event).then(function(data) {
       obj.events.push(data.data);
@@ -32,7 +46,7 @@ angular.module('motherFoucaults')
     return $http.get('/events.json').then(function(data) {
       data.data.forEach(function(index) {
         if (index.description) {
-          index.snippet = index.description.slice(0, 300)+' (. . .)';
+          index.snippet = decodeURI(index.description).slice(0, 300)+' (. . .)';
         }
       });
       data.data.sort(function(a,b) {
