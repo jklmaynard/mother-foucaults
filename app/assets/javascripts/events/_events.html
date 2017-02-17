@@ -7,13 +7,13 @@
     <form class="" ng-submit="editEvent(event)" style="margin-top:30px">
       <h3>Edit</h3>
       <div class="form-group">
-        <input type="text" class="form-control" placeholder={{event.title}} ng-model="title">
+        <input type="text" class="form-control" placeholder={{event.title}} ng-model="eventTitle">
       </div>
       <div class="form-group">
-        <textarea type="text" rows="5" cols="6" class="form-control" placeholder={{event.description}} ng-model="description"></textarea>
+        <textarea type="text" rows="5" cols="6" class="form-control" placeholder={{event.description}} ng-model="eventDescription"></textarea>
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" placeholder={{event.date}} ng-model="date">
+        <input type="text" class="form-control" placeholder={{event.date}} ng-model="eventDate">
       </div>
       <button type="submit" class="btn btn-primary">Edit Event</button>
     </form>

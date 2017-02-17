@@ -6,16 +6,21 @@ angular.module('motherFoucaults')
   'Auth',
   function($scope, $stateParams, events, Auth){
     $scope.event = events.events[$stateParams.id];
+    $scope.eventTitle = '';
+    $scope.eventDescription = '';
+    $scope.eventDate = '';
     Auth.currentUser().then(function() {
       $scope.signedIn = Auth.isAuthenticated;
       $scope.logout = Auth.logout;
     });
-    $scope.editEvent = function(event) {
+    $scope.editEvent = function() {
       events.edit({
-        id: event.id,
-        title: $scope.title === undefined ? event.title : $scope.title,
-        date: $scope.date === undefined ? event.date : $scope.date,
-        description: $scope.description === undefined ? event.description : $scope.description
+        id: $scope.event.id,
+        title: $scope.eventTitle === '' ? $scope.event.title : $scope.eventTitle,
+        date: $scope.eventDate === '' ? $scope.event.date : $scope.eventDate,
+        description: $scope.eventDescription === '' ? $scope.event.description : $scope.eventDescription
+      }, $scope.event).then(function(data) {
+        return $scope.event = data;
       })
     };
   }

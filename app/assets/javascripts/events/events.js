@@ -12,6 +12,9 @@ angular.module('motherFoucaults')
           index.snippet = index.description.slice(0, 300)+' (. . .)';
         }
       });
+      data.data.sort(function(a,b) {
+        return new Date(a.date) - new Date(b.date);
+      });
       angular.copy(data.data, obj.events);
     });
   };
@@ -34,11 +37,9 @@ angular.module('motherFoucaults')
       event.likes += 1;
     });
   };
-  obj.edit = function(event) {
+  obj.edit = function(event, updatedEvent) {
     return $http.put('/events/' + event.id + '.json', event).then(function(data) {
-      event.title = data.title;
-      event.description = data.description;
-      event.date = data.date;
+      return updatedEvent = event;
     })
   }
   obj.delete = function(event) {
