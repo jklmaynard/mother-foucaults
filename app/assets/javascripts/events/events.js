@@ -5,6 +5,9 @@ angular.module('motherFoucaults')
   var obj = {
     events: []
   };
+  obj.errorLog = function(err) {
+    alert(err);
+  }
   obj.create = function(event) {
     return $http.post('/events.json', event).then(function(data) {
       obj.events.push(data.data);
@@ -24,7 +27,7 @@ angular.module('motherFoucaults')
     return $http.put('/events/' + event.id + '.json', event).then(function(data) {
       return updatedEvent = event;
     })
-  }
+  };
   obj.getAll = function() {
     return $http.get('/events.json').then(function(data) {
       data.data.forEach(function(index) {
@@ -51,14 +54,14 @@ angular.module('motherFoucaults')
   obj.numberizeEventTime = function(str) {
     var int, timeArray = str.toLowerCase().split(' ');
     if (timeArray.length !== 2) {
-      alert("Please make sure your hour and the ante/post meridian are separated by a space.")
+      obj.errorLog("Please make sure your hour and the ante/post meridian are separated by a space.");
     }
     if (timeArray[1] === 'am') {
       int = parseInt(timeArray[0]);
     } else if (timeArray[1] === 'pm') {
       int = (parseInt(timeArray[0]) + 12);
     } else {
-      alert('something went wrong')
+      obj.errorLog("Something went wrong.  Please make sure the time is set with hour and meridian, e.g., '7 am'")
     }
     return int;
   }
