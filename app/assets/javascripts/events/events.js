@@ -15,6 +15,11 @@ angular.module('motherFoucaults')
       angular.copy(data.data, obj.events);
     });
   };
+  obj.getEvent = function(event) {
+    return $http.get('/events' + event.id + '.json').then(function(data) {
+      return event;
+    });
+  };
   obj.create = function(event) {
     return $http.post('/events.json', event).then(function(data) {
       obj.events.push(data.data);
