@@ -5,7 +5,7 @@ angular.module('motherFoucaults')
   function($scope, Auth) {
     $scope.signedIn = Auth.isAuthenticated;
     $scope.logout = Auth.logout;
-    if (Auth.isAuthenticated === false) {
+    if (Auth.isAuthenticated === true) {
       Auth.currentUser().then(function (user){
         $scope.user = user;
       }, function (err) {

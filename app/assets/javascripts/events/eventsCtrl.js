@@ -24,10 +24,14 @@ angular.module('motherFoucaults')
         div.appendChild(el);
       });
     }
-    Auth.currentUser().then(function() {
-      $scope.signedIn = Auth.isAuthenticated;
-      $scope.logout = Auth.logout;
-    });
+    if (Auth.isAuthenticated === true) {
+      Auth.currentUser().then(function() {
+        $scope.signedIn = Auth.isAuthenticated;
+        $scope.logout = Auth.logout;
+      }, function(err) {
+        return;
+      });
+    }
     $scope.editEvent = function() {
       events.edit({
         id: $scope.event.id,
