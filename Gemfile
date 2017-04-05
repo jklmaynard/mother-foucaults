@@ -17,6 +17,8 @@ gem 'angular-rails-templates', '~> 1.0.2'
 gem 'angular_rails_csrf'
 gem 'responders', '~>2.3.0'
 gem 'devise', '~> 4.2.0'
+gem 'paperclip', '~> 4.2'
+gem 'active_model_serializers'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password

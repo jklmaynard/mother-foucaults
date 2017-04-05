@@ -8,4 +8,5 @@
 //= require angular-ui-router
 //= require angular-ui-calendar
 //= require fullcalendar
+//= require angular-base64-upload
 //= require_tree .
