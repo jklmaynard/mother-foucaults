@@ -6,7 +6,9 @@ class EventsController < ApplicationController
   end
 
   def create
-    respond_with Event.create(event_params)
+    event = Event.create(event_params)
+    event.update(image: decode_base64)
+    respond_with event
   end
 
   def show
@@ -36,5 +38,9 @@ class EventsController < ApplicationController
   private
   def event_params
     params.require(:event).permit(:title, :description, :date, :time)
+  end
+  def decode_base64
+    decoded_data = Base64.decode64(params[:image][:base64])
+    data = StringIO.new(decoded_data)
   end
 end
