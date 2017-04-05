@@ -5,13 +5,11 @@ angular.module('motherFoucaults')
   'Auth',
   '$state',
   function($scope, events, Auth, $state) {
-    if (Auth.isAuthenticated === false) {
       Auth.currentUser().then(function() {
         $scope.signedIn = Auth.isAuthenticated;
       }, function(err) {
         return;
       });
-    }
     $scope.events = events.events.sort(function(a,b) {
       return new Date(a.date) - new Date(b.date);
     });
