@@ -1,4 +1,4 @@
-angular.module('motherFoucaults', ['ui.router', 'templates', 'ui.calendar', 'Devise', 'ui.bootstrap'])
+angular.module('motherFoucaults', ['ui.router', 'templates', 'ui.calendar', 'Devise', 'ui.bootstrap', 'naif.base64'])
   .config([
     '$stateProvider',
     '$urlRouterProvider',

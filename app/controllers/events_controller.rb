@@ -42,5 +42,6 @@ class EventsController < ApplicationController
   def decode_base64
     decoded_data = Base64.decode64(params[:image][:base64])
     data = StringIO.new(decoded_data)
+    data
   end
 end

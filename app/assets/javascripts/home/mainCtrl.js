@@ -30,7 +30,8 @@ angular.module('motherFoucaults')
           description: encodeURI($scope.description),
           likes: 0,
           snippet: $scope.description.slice(0, 300),
-          time: $scope.timeInt
+          time: $scope.timeInt,
+          image: $scope.image
         });
         //Back to home page
         $state.go('home');
