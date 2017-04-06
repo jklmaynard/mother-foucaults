@@ -1,9 +1,13 @@
+<div class="col-md-4">
+  <h3>{{event.title}}</h3>
+  <h4>{{event.date}}</h4>
+</div>
+  <div class="event-image-container col-md-8">
+    <img class="event-image" src="{{event.image}}" alt="">
+  </div>
   <div class="col-md-12">
-    <img src="{{event.image}}" alt="">
-    <h3>{{event.title}}</h3>
-    <h4>{{event.date}}</h4>
     <div id="event-description">
-
+      <!-- Set in eventsCtrl.js with setDOMNode function -->
     </div>
   </div>
   <div class="col-md-12"  style="margin-top:130px;" ng-show="signedIn()">

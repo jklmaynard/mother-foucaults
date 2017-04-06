@@ -7,7 +7,18 @@ a, a:hover {
 a.right.carousel-control, a.left.carousel-control {
   display: none;
 }
-
+.event-image {
+  height: 200px;
+}
+.event-image-container {
+  padding: 10px;
+}
+#logo {
+  height: auto;
+  margin-left: -35px;
+  margin-top: -58px;
+  width: 100%;
+}
 .mo-fos-viewport {
   display: flex;
   flex-direction: row;
@@ -16,13 +27,6 @@ a.right.carousel-control, a.left.carousel-control {
 .mobile-header {
   display: none;
 }
-#logo {
-  height: auto;
-  margin-left: -35px;
-  margin-top: -58px;
-  width: 100%;
-}
-
 .mo-fos-center-column {
   border-right-style: inset;
 }
@@ -30,7 +34,6 @@ a.right.carousel-control, a.left.carousel-control {
   height: auto;
   width: 100%;
 }
-
 .mo-fos-right-column {}
 .mo-fos-right-column ul {
   font-size: 20px;
