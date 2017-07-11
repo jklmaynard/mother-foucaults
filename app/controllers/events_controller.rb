@@ -37,7 +37,7 @@ class EventsController < ApplicationController
   end
   private
   def event_params
-    params.require(:event).permit(:title, :description, :date, :time)
+    params.require(:event).permit(:title, :description, :date, :time, :image)
   end
   def decode_base64
     decoded_data = Base64.decode64(params[:image][:base64])
