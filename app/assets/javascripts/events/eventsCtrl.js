@@ -6,6 +6,12 @@ angular.module('motherFoucaults')
   'Auth',
   function($scope, $stateParams, events, Auth){
     $scope.event = events.events[$stateParams.id];
+
+    // if image is not included in event, substitute another image
+    if ($scope.event.image == '/images/original/missing.png') {
+        $scope.event.image = 'images/carousel-2.png'
+    }
+
     $scope.eventTitle = '';
     $scope.eventDate = '';
     $scope.eventTime = '';
